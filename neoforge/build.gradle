@@ -2,6 +2,12 @@ plugins {
     id 'com.github.johnrengelman.shadow'
 }
 
+loom {
+    neoForge {
+        accessTransformer(file("src/main/resources/META-INF/accesstransformer.cfg"))
+    }
+}
+
 architectury {
     platformSetupLoomIde()
     neoForge()
@@ -31,14 +37,9 @@ repositories {
     }
 }
 
-loom {
-    accessWidenerPath = file('src/main/resources/morevillagers_mb.accesswidener')
-}
-
 dependencies {
     neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
 
-    modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')

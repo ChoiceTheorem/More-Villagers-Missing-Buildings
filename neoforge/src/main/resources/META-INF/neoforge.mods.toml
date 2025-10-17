@@ -23,7 +23,7 @@ side = "BOTH"
 [[dependencies.morevillagers_mb]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21,)"
+versionRange = "[1.21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
@@ -36,3 +36,6 @@ side = "BOTH"
 
 [[mixins]]
 config = "morevillagers_mb.mixins.json"
+
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
