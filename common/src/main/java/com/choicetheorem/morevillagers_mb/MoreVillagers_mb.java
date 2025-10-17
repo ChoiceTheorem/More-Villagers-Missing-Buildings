@@ -26,7 +26,7 @@ public final class MoreVillagers_mb {
 		ResourceLocation taigaPoolLocation = ResourceLocation.fromNamespaceAndPath("minecraft", "village/taiga/houses");
 		
 		// PLAINS VILLAGE HOUSES
-		
+		/*
 		if (ConfigHelper.generatePlainsHouses()) {
 			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_woodworker", ConfigHelper.woodworkerHouseWeight());
 			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_oceanographer", ConfigHelper.oceanographerHouseWeight());
@@ -71,7 +71,7 @@ public final class MoreVillagers_mb {
 			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_hunter_engineer", ConfigHelper.engineerHouseWeight());
 		
 		}
-		 */
+		*/
 	}
 	
 	public static ResourceLocation getRL(String modid, String location) {
