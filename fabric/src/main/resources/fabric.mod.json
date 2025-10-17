@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "morevillagers_mb",
+	"accessWidener": "morevillagers_mb.accesswidener",
+	"version": "${version}",
+	"name": "More Villagers:Missing Buildings",
+	"description": "",
+	"authors": [
+		"ChoiceTheorem"
+	],
+	"contact": {
+		"homepage": ""
+	},
+	"license": "All-Rights-Reserved",
+	"icon": "assets/morevillagers_mb/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.choicetheorem.morevillagers_mb.fabric.MoreVillagers_mbFabric"
+		],
+		"client": [
+			"com.choicetheorem.morevillagers_mb.fabric.client.MoreVillagers_mbFabricClient"
+		]
+	},
+	"mixins": [
+		"morevillagers_mb.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
