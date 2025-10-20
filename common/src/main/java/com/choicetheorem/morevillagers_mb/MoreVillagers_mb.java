@@ -1,9 +1,10 @@
 package com.choicetheorem.morevillagers_mb;
 
-import com.choicetheorem.morevillagers_mb.util.JigsawHelper;
+import com.choicetheorem.morevillagers_mb.platform.MVMBConfigHelper_mb;
+import com.frikinjay.morevillagers.platform.ConfigHelper;
+import com.frikinjay.morevillagers.util.JigsawHelper;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
@@ -26,52 +27,30 @@ public final class MoreVillagers_mb {
 		ResourceLocation taigaPoolLocation = ResourceLocation.fromNamespaceAndPath("minecraft", "village/taiga/houses");
 		
 		// PLAINS VILLAGE HOUSES
-		/*
+		
 		if (ConfigHelper.generatePlainsHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_woodworker", ConfigHelper.woodworkerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_oceanographer", ConfigHelper.oceanographerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_florist", ConfigHelper.floristHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_hunter", ConfigHelper.hunterHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_engineer", ConfigHelper.engineerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_miner", MVMBConfigHelper_mb.minerHouseWeight());
 		}
 		
 		// TAIGA VILLAGE HOUSES
 		if (ConfigHelper.generateTaigaHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_woodworker", ConfigHelper.woodworkerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_oceanographer", ConfigHelper.oceanographerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_florist", ConfigHelper.floristHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_hunter", ConfigHelper.hunterHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_engineer", ConfigHelper.engineerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_miner", MVMBConfigHelper_mb.minerHouseWeight());
 		}
 		
 		// SAVANNA VILLAGE HOUSES
 		if (ConfigHelper.generateSavannaHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_woodworker", ConfigHelper.woodworkerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_oceanographer", ConfigHelper.oceanographerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_florist", ConfigHelper.floristHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_hunter", ConfigHelper.hunterHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_engineer", ConfigHelper.engineerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_miner", MVMBConfigHelper_mb.minerHouseWeight());
 		}
 		
 		// SNOWY VILLAGE HOUSES
 		if (ConfigHelper.generateSnowyHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_woodworker", ConfigHelper.woodworkerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_oceanographer", ConfigHelper.oceanographerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_florist", ConfigHelper.floristHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_hunter", ConfigHelper.hunterHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_engineer", ConfigHelper.engineerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_miner", MVMBConfigHelper_mb.minerHouseWeight());
 		}
 		
 		// DESERT VILLAGE HOUSES
 		if (ConfigHelper.generateDesertHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_woodworker", ConfigHelper.woodworkerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_oceanographer", ConfigHelper.oceanographerHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_florist", ConfigHelper.floristHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_hunter", ConfigHelper.hunterHouseWeight());
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_hunter_engineer", ConfigHelper.engineerHouseWeight());
-		
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_miner", MVMBConfigHelper_mb.minerHouseWeight());
 		}
-		*/
 	}
 	
 	public static ResourceLocation getRL(String modid, String location) {

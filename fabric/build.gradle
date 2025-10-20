@@ -34,10 +34,16 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
-
+    modApi include("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_fabric_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}", {
+        exclude module: "fabric-api"
+    }
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
+    modImplementation "curse.maven:more-villagers-re-employed-1147438:6604916"
 }
 
 processResources {
@@ -47,7 +53,16 @@ processResources {
         expand version: project.version
     }
 }
-
+repositories {
+    maven { url "https://maven.shedaniel.me/" }
+    maven { url "https://maven.terraformersmc.com/releases" }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
 shadowJar {
     configurations = [project.configurations.shadowBundle]
     archiveClassifier = 'dev-shadow'
