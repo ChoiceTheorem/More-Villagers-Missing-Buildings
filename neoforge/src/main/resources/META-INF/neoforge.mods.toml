@@ -6,12 +6,12 @@ license = "All Rights Reserved"
 [[mods]]
 modId = "morevillagers_mb"
 version = "${version}"
-displayName = "More Villagers_Missing Buildings"
+displayName = "MoreVillagers:Missing Buildings"
 authors = "ChoiceTheorem"
 description = '''
-
+Adds in missing buildings for morevillagers
 '''
-#logoFile = ""
+logoFile = "icon.png"
 
 [[dependencies.morevillagers_mb]]
 modId = "neoforge"
@@ -28,9 +28,9 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.morevillagers_mb]]
-modId = "architectury"
+modId = "morevillagers"
 type = "required"
-versionRange = "[13.0.8,)"
+versionRange = "[5.0.0,)"
 ordering = "AFTER"
 side = "BOTH"
 

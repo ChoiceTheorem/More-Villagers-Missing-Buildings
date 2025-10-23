@@ -1,6 +1,6 @@
 package com.choicetheorem.morevillagers_mb;
 
-import com.choicetheorem.morevillagers_mb.platform.MVMBConfigHelper_mb;
+import com.choicetheorem.morevillagers_mb.platform.MVMBConfigHelper;
 import com.frikinjay.morevillagers.platform.ConfigHelper;
 import com.frikinjay.morevillagers.util.JigsawHelper;
 import net.minecraft.core.Registry;
@@ -29,27 +29,27 @@ public final class MoreVillagers_mb {
 		// PLAINS VILLAGE HOUSES
 		
 		if (ConfigHelper.generatePlainsHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_miner", MVMBConfigHelper_mb.minerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "morevillagers:village/plains/plains_miner", MVMBConfigHelper.minerHouseWeight());
 		}
 		
 		// TAIGA VILLAGE HOUSES
 		if (ConfigHelper.generateTaigaHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_miner", MVMBConfigHelper_mb.minerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "morevillagers:village/taiga/taiga_miner", MVMBConfigHelper.minerHouseWeight());
 		}
 		
 		// SAVANNA VILLAGE HOUSES
 		if (ConfigHelper.generateSavannaHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_miner", MVMBConfigHelper_mb.minerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "morevillagers:village/savanna/savanna_miner", MVMBConfigHelper.minerHouseWeight());
 		}
 		
 		// SNOWY VILLAGE HOUSES
 		if (ConfigHelper.generateSnowyHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_miner", MVMBConfigHelper_mb.minerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "morevillagers:village/snowy/snowy_miner", MVMBConfigHelper.minerHouseWeight());
 		}
 		
 		// DESERT VILLAGE HOUSES
 		if (ConfigHelper.generateDesertHouses()) {
-			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_miner", MVMBConfigHelper_mb.minerHouseWeight());
+			JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "morevillagers:village/desert/desert_miner", MVMBConfigHelper.minerHouseWeight());
 		}
 	}
 	

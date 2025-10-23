@@ -3,8 +3,8 @@
 	"id": "morevillagers_mb",
 	"accessWidener": "morevillagers_mb.accesswidener",
 	"version": "${version}",
-	"name": "More Villagers:Missing Buildings",
-	"description": "",
+	"name": "MoreVillagers:Missing Buildings",
+	"description": "Adds in missing buildings for morevillagers",
 	"authors": [
 		"ChoiceTheorem"
 	],
@@ -12,7 +12,7 @@
 		"homepage": ""
 	},
 	"license": "All-Rights-Reserved",
-	"icon": "assets/morevillagers_mb/icon.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -29,9 +29,12 @@
 		"fabricloader": ">=0.16.9",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"cloth-config": ">=15.0.140",
+		"morevillagers": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"ctov": "*",
+		"modmenu": ">=11.0.3"
 	}
 }
