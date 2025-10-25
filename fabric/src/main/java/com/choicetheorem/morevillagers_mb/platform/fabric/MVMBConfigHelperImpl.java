@@ -9,5 +9,8 @@ public class MVMBConfigHelperImpl {
 	public static int minerHouseWeight() {
 		return config.weights.minerHouseWeight;
 	}
-
+	
+	public static int netherologistHouseWeight() {
+		return config.weights.netherologistHouseWeight;
+	}
 }

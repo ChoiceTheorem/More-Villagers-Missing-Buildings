@@ -7,4 +7,8 @@ public class MVMBConfigHelper {
 	public static int minerHouseWeight() {
 		throw new AssertionError();
 	}
+	@ExpectPlatform
+	public static int netherologistHouseWeight(){
+		throw new AssertionError();
+	}
 }

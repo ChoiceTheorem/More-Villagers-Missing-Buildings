@@ -12,6 +12,7 @@ public class MVMBConfigNeoForge {
     
     public static final String CATEGORY_WEIGHTS = "weights";
     public static final ModConfigSpec.IntValue MINER_HOUSE_WEIGHT;
+    public static final ModConfigSpec.IntValue NETHEROLOGIST_HOUSE_WEIGHT;
 
     static {
         ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
@@ -19,6 +20,8 @@ public class MVMBConfigNeoForge {
         COMMON_BUILDER.comment("House weights (spawn frequency)").push(CATEGORY_WEIGHTS);
         MINER_HOUSE_WEIGHT = COMMON_BUILDER.comment("Miner house spawn chance")
                 .defineInRange("minerHouseWeight", 10, 0, Integer.MAX_VALUE);
+        NETHEROLOGIST_HOUSE_WEIGHT = COMMON_BUILDER.comment("Netherologist house spawn chance")
+                .defineInRange("netherologistHouseWeight", 10, 0, Integer.MAX_VALUE);
 
         COMMON_BUILDER.pop();
 

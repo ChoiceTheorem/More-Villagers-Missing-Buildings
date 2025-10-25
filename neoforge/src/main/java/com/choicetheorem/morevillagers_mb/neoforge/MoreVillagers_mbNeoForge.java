@@ -7,6 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
 
 @Mod(MoreVillagers_mb.MOD_ID)
@@ -15,6 +16,7 @@ public final class MoreVillagers_mbNeoForge {
 		// Run our common setup.
 		MoreVillagers_mb.init();
 		container.registerConfig(ModConfig.Type.COMMON, MVMBConfigNeoForge.COMMON_CONFIG);
+		NeoForge.EVENT_BUS.register(this);
 	}
 	@SubscribeEvent
 	public void onServerAboutToStartEvent(ServerAboutToStartEvent event) {
