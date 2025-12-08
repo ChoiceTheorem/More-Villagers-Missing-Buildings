@@ -3,8 +3,10 @@ package com.choicetheorem.morevillagers_mb;
 import com.choicetheorem.morevillagers_mb.platform.MVMBConfigHelper;
 import com.frikinjay.morevillagers.platform.ConfigHelper;
 import com.frikinjay.morevillagers.util.JigsawHelper;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.ProcessorLists;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
@@ -17,8 +19,9 @@ public final class MoreVillagers_mb {
 		// Write common init code here.
 	}
 	public static void registerJigsaws(MinecraftServer server) {
-		Registry<StructureTemplatePool> templatePoolRegistry = server.registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
-		Registry<StructureProcessorList> processorListRegistry = server.registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
+		HolderLookup.Provider registryProvider = server.registryAccess();
+		HolderLookup<StructureTemplatePool> templatePoolRegistry = registryProvider.lookupOrThrow(Registries.TEMPLATE_POOL);
+		HolderLookup<StructureProcessorList> processorListRegistry = registryProvider.lookupOrThrow(Registries.PROCESSOR_LIST);
 		
 		ResourceLocation plainsPoolLocation = ResourceLocation.fromNamespaceAndPath("minecraft", "village/plains/houses");
 		ResourceLocation desertPoolLocation = ResourceLocation.fromNamespaceAndPath("minecraft", "village/desert/houses");

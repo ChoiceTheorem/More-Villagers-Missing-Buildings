@@ -43,7 +43,7 @@ dependencies {
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
-    modImplementation "curse.maven:more-villagers-re-employed-1147438:6604916"
+    modImplementation "curse.maven:more-villagers-re-employed-1147438:7300877"
 }
 
 processResources {
