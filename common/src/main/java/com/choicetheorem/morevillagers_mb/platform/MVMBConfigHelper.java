@@ -11,4 +11,9 @@ public class MVMBConfigHelper {
 	public static int netherologistHouseWeight(){
 		throw new AssertionError();
 	}
+	
+	@ExpectPlatform
+	public static int enderologistHouseWeight(){
+		throw new AssertionError();
+	}
 }
