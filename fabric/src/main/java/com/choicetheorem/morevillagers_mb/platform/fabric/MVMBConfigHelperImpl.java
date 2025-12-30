@@ -13,4 +13,8 @@ public class MVMBConfigHelperImpl {
 	public static int netherologistHouseWeight() {
 		return config.weights.netherologistHouseWeight;
 	}
+	
+	public static int enderologistHouseWeight() {
+		return config.weights.enderologistHouseWeight;
+	}
 }

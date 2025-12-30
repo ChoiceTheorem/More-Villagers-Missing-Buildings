@@ -17,5 +17,7 @@ public class MVMBConfigFabric implements ConfigData {
 		public int minerHouseWeight = 10;
 		@Comment("Netherologist house spawn chance")
 		public int netherologistHouseWeight = 10;
+		@Comment("Enderologist house spawn chance")
+		public int enderologistHouseWeight = 10;
 	}
 }

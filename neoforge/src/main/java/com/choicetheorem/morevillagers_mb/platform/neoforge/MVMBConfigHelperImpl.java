@@ -9,4 +9,7 @@ public class MVMBConfigHelperImpl {
 	public static int netherologistHouseWeight() {
 		return MVMBConfigNeoForge.NETHEROLOGIST_HOUSE_WEIGHT.get();
 	}
+	public static int enderologistHouseWeight() {
+		return MVMBConfigNeoForge.ENDEROLOGIST_HOUSE_WEIGHT.get();
+	}
 }
