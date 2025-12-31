@@ -22,5 +22,5 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
     //modImplementation "maven.modrinth:more-villagers-re-employed:$rootProject.mv_version"
-    modImplementation "curse.maven:more-villagers-re-employed-1147438:6604916"
+    modImplementation "curse.maven:more-villagers-re-employed-1147438:7195795"
 }

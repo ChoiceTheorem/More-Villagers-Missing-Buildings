@@ -10,8 +10,6 @@ public class MVMBConfigFabric implements ConfigData {
 	// Settings
 	@ConfigEntry.Gui.CollapsibleObject
 	public Weights weights = new Weights();
-	
-	
 	public static class Weights {
 		@Comment("Miner house spawn chance")
 		public int minerHouseWeight = 10;
