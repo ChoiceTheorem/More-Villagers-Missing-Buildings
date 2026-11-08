@@ -6,7 +6,7 @@ import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.bus.api.SubscribeEvent;
 
-@EventBusSubscriber(modid = MoreVillagers_mb.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = MoreVillagers_mb.MOD_ID)
 public class MVMBConfigNeoForge {
     public static ModConfigSpec COMMON_CONFIG;
     
